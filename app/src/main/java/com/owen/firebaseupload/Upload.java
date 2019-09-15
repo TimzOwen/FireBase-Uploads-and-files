@@ -2,6 +2,7 @@ package com.owen.firebaseupload;
 
 public class Upload {
 
+    //create the setter and getter methods
     private String mName, mImageUrl;
 
     public Upload()
