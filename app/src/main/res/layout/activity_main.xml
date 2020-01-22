@@ -5,15 +5,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_choose_Image"
+        android:layout_width="wrap_content"
+        android:text="@string/choose_image"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/et_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_file_name"
+        android:layout_toEndOf="@id/btn_choose_Image"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/btn_choose_Image"
+        android:layout_marginLeft="16dp" />
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/et_file_name"
+        android:layout_above="@id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_above="@id/btn_uploads"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentLeft="true" />
+    <Button
+        android:id="@+id/btn_uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Upload"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/uploads"
+        android:layout_toEndOf="@+id/btn_uploads"
+        android:layout_alignBaseline="@id/btn_uploads"
+        android:layout_alignBottom="@id/btn_uploads"
+        android:layout_toRightOf="@+id/btn_uploads"
+        android:layout_marginStart="15dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginLeft="15dp" />
+
 
 </RelativeLayout>
